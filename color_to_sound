@@ -1,9 +1,9 @@
-#Color to sound
-c=299792458
+# Color to sound
+c = 299792458
 waveorfreq = input("Are you giving (W)avelength or (F)requency? ")
 
 w_frequencylist = []
-if waveorfreq.lower() == "w":
+if waveorfreq.lower() == "w" or waveorfreq.lower() == "wavelength":
     wavelength = float(input("What is the wavelength of your color? "))
     freqfromwave = c / wavelength
     while freqfromwave >= 392:
@@ -13,21 +13,29 @@ if waveorfreq.lower() == "w":
             break
     freqrecent = w_frequencylist[-1]
     print(f"Your frequency is {freqrecent}")
-    if freqrecent >= 196 and freqrecent <= 219.99:
+    if 196 <= freqrecent <= 207.64:
         print("g3")
-    elif freqrecent >= 220 and freqrecent <= 246.93:
+    elif 207.65 <= freqrecent <= 219.99:
+        print("g3#")
+    elif 220 <= freqrecent <= 233.07:
         print("a3")
-    elif freqrecent >= 246.93 and freqrecent <= 261.62:
+    elif 233.08 <= freqrecent <= 246.93:
+        print("a3#")
+    elif 246.94 <= freqrecent <= 261.62:
         print("b3")
-    elif freqrecent >= 261.63 and freqrecent <= 293.65:
+    elif 261.63 <= freqrecent <= 277.17:
         print("c4")
-    elif freqrecent >= 293.66 and freqrecent <= 329.62:
+    elif 277.18 <= freqrecent <= 293.65:
+        print("c4#")
+    elif 293.66 <= freqrecent <= 311.12:
         print("d4")
-    elif freqrecent >= 329.63 and freqrecent <= 349.22:
+    elif 311.13 <= freqrecent <= 329.62:
+        print("d4#")
+    elif 329.63 <= freqrecent <= 349.22:
         print("e4")
-    elif freqrecent >= 349.23 and freqrecent <= 392:
+    elif 349.23 <= freqrecent <= 392:
         print("g4")
-elif waveorfreq == "f":
+elif waveorfreq.lower == "f" or waveorfreq.lower() == "frequency":
     frequency = float(input("What is the frequency of your wavelength? "))
     frequencylist = []
     while frequency >= 392:
@@ -35,21 +43,29 @@ elif waveorfreq == "f":
         frequencylist.append(frequency)
         if frequency < 196:
             break
-    F_recent=frequencylist[-1]
+    F_recent = frequencylist[-1]
     print(f"Your frequency is {F_recent}")
-    if F_recent >= 196 and F_recent <= 219.99:
+    if 196 <= F_recent <= 207.64:
         print("g3")
-    elif F_recent >= 220 and F_recent <= 246.93:
+    elif 207.65 <= F_recent <= 219.99:
+        print("g3#")
+    elif 220 <= F_recent <= 233.07:
         print("a3")
-    elif F_recent >= 246.93 and F_recent <= 261.62:
+    elif 233.08 <= F_recent <= 246.93:
+        print("a3#")
+    elif 246.94 <= F_recent <= 261.62:
         print("b3")
-    elif F_recent >= 261.63 and F_recent <= 293.65:
+    elif 261.63 <= F_recent <= 277.17:
         print("c4")
-    elif F_recent >= 293.66 and F_recent <= 329.62:
+    elif 277.18 <= F_recent <= 293.65:
+        print("c4#")
+    elif 293.66 <= F_recent <= 311.12:
         print("d4")
-    elif F_recent >= 329.63 and F_recent <= 349.22:
+    elif 311.13 <= F_recent <= 329.62:
+        print("d4#")
+    elif 329.63 <= F_recent <= 349.22:
         print("e4")
-    elif F_recent >= 349.23 and F_recent <= 392:
+    elif 349.23 <= F_recent <= 392:
         print("g4")
 else:
     print("ur stoopid")
